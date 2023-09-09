@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- {% if user.is_authenticated %} -->
+
+{% for i in blog %}
+
+<div class="card" >
+    <div class="card-body">
+      <h5 class="display-4" style="text-align: center">{{i.Blog_Heading}}</h5>
+      <img src="{{i.Blog_Image.url}}" class="card-img-top" width="400" height="500">
+      <p class="card-text">{{i.Blog_Description}}</p>
+      <p class="text-muted"><small> Uploaded By -{{i.Publisher_Name}} on -{{i.Published_On}}</small></p>
+  </div>
+  </div>
+  <br>
+  <br> 
+  {% endfor %}
+  
+<!-- {% else %} -->
+
+<!-- <h1 class="display-3">Login First </h1> -->
+
+<!-- {% endif %} -->
+
+{% endblock %}
